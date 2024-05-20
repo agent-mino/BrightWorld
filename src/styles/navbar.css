@@ -1,0 +1,60 @@
+/* navbar styling */
+nav {
+    background-color: rgb(30, 40, 40);
+}
+
+.navbar-brand {
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 5px;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.navbar-brand .main-text {
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: white;
+}
+
+.navbar-brand .sub-text {
+    font-size: 15px;
+    letter-spacing: 3px;
+    margin-top: -7px;
+    color: rgb(120, 117, 117);
+}
+
+.navbar-brand:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-brand:active {
+    color: white;
+}
+
+.navbar-brand:focus {
+    color: white;
+}
+
+.nav-link {
+    letter-spacing: -0.3px;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color:'white';
+}
+.nav-link:focus {
+    color:'white';
+}
+.nav-link:active {
+    
+    color:'white';
+}
+
