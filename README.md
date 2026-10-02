@@ -5,7 +5,7 @@
 **Live:** https://bright-world.vercel.app
 
 A front-end e-commerce storefront for lighting products, built with **React 18** and **React Router**.
-It was an early React project (2024) focused on component structure, routing and shared state.
+Demonstrates multi-route SPA architecture, shared state with React Context, and persistent cart state via `localStorage`.
 
 ## Features
 

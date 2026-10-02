@@ -148,6 +148,10 @@
 }
 
 #clear-cart {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
   text-align: center;
   padding-top: 1.8%;
   font-size: 14px;

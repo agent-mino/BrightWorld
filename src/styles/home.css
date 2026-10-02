@@ -22,17 +22,22 @@
     font-weight: bold;
 }
 
-.carousel-text-bg button {
+.carousel-text-bg button,
+.carousel-text-bg .carousel-cta {
     background-color: black;
     color: white;
     border: none;
     padding: 5px 13px 5px 13px;
     border: 1px solid black;
     font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.carousel-text-bg button:hover {
+.carousel-text-bg button:hover,
+.carousel-text-bg .carousel-cta:hover {
     background-color: rgb(42, 41, 41);
+    color: white;
     transition: 0.2s;
 }
 

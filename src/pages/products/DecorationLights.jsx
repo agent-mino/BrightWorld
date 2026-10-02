@@ -14,12 +14,12 @@ function DecorationLights() {
       <div className='hidden'>
         <section className=" product-header-container">
           <h2>Decoration Lights</h2>
-          <p>A variety of LED lights with decorative designss</p>
+          <p>A variety of LED lights with decorative designs</p>
         </section>
         <div className="product-container container text-center">
           <div className="row">
-          {DecorationLightsCareProducts.map((product, index) => (
-            <div key={index} className="product-div col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+          {DecorationLightsCareProducts.map((product) => (
+            <div key={product.id} className="product-div col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
               <ProductCards
                 src={product.imageSrc}
                 name={product.name}

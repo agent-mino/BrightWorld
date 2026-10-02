@@ -4,16 +4,11 @@ import { useCart } from '../../context/cartContext';
 import CartCards from '../../components/cartCards/cartCards';
 import { Link } from 'react-router-dom';
 
-
 function Carts() {
-  // cart global state
   const { cart, setCart } = useCart();
-  // Calculate total price
-  const totalPrice = cart.reduce((total, product) => total + product.price, 0);
-  // Function to clear cart
-  const clearCart = () => {
-    setCart([]);
-  };
+  const totalPrice = cart.reduce((total, product) => total + product.price, 0).toFixed(2);
+
+  const clearCart = () => setCart([]);
 
   return (
     <>
@@ -41,11 +36,10 @@ function Carts() {
                 <div className="col-lg-7 col-md-12">
                   {cart.map((item, index) => (
                     <CartCards
-                      key={index}
+                      key={`${item.id}-${index}`}
                       img={item.imageSrc}
                       name={item.name}
                       price={item.price}
-                      total={totalPrice.toFixed(2)}
                       id={item.id}
                     />
                   ))}
@@ -72,7 +66,7 @@ function Carts() {
                     <Link to='/cart/checkout'>
                       <button className="checkout-btn">Checkout (${totalPrice})</button>
                     </Link>
-                    <p onClick={clearCart} id='clear-cart'>Clear Cart ?</p>
+                    <button onClick={clearCart} id='clear-cart'>Clear Cart?</button>
                   </div>
                 </div>
               </div>

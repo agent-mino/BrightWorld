@@ -13,12 +13,12 @@ function Chandelier() {
     <div className='hidden'>
       <section className=" product-header-container">
         <h2>Chandelier PRODUCTS</h2>
-        <p>Clean, cruelty-free products to pamper, protect and nourish every SpotLight type.</p>
+        <p>Elevate any space with our curated collection of statement chandeliers and pendant lights.</p>
       </section>
       <div className="product-container container text-center">
         <div className="row">
-        {ChandelierProducts.map((product, index) => (
-            <div key={index} className="product-div col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+        {ChandelierProducts.map((product) => (
+            <div key={product.id} className="product-div col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
               <ProductCards
                 src={product.imageSrc}
                 name={product.name}

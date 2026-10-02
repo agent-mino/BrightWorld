@@ -31,10 +31,10 @@ function Home() {
           <h2 className='text-center' id='shopnow'>EXCLUSIVE</h2><hr />
           <div className="row">
 
-            {exclusiveProducts.map((product,index) => (
-              <div key={index} className="best-sellers-div col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            {exclusiveProducts.map((product) => (
+              <div key={product.id} className="best-sellers-div col-xl-4 col-lg-4 col-md-6 col-sm-6">
                 <ProductCards
-                  src={product.imageSrc}  // Assuming each product has an `image` property for the URL
+                  src={product.imageSrc}
                   name={product.name}
                   price={product.price}
                   id={product.id}
@@ -45,11 +45,6 @@ function Home() {
           </div>
         </div>
       </section>
-
-
-      {/* img section */}
-
-
 
 
       {/* feedback option */}

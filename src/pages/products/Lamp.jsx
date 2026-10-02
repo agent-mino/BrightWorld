@@ -17,8 +17,8 @@ function Lamp() {
       </section>
       <div className="product-container container text-center">
         <div className="row">
-        {LampProducts.map((product, index) => (
-            <div key={index} className="product-div col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+        {LampProducts.map((product) => (
+            <div key={product.id} className="product-div col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
               <ProductCards
                 src={product.imageSrc}
                 name={product.name}

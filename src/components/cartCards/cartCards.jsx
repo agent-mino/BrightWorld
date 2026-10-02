@@ -3,13 +3,17 @@ import '../../styles/cart.css'
 import { MdDelete } from "react-icons/md";
 import { useCart } from '../../context/cartContext';
 
-function CartCards({ img, name, price, id}) {
+function CartCards({ img, name, price, id }) {
     // cart global state
-    const { cart, setCart } = useCart();
-    // Function to remove item from cart
+    const { setCart } = useCart();
+    // Remove only the first matching item so adding the same product twice
+    // and removing once doesn't wipe all copies.
     const removeFromCart = (itemId) => {
-        const updatedCart = cart.filter(item => item.id !== itemId);
-        setCart(updatedCart);
+        setCart(prev => {
+            const idx = prev.findIndex(item => item.id === itemId);
+            if (idx === -1) return prev;
+            return [...prev.slice(0, idx), ...prev.slice(idx + 1)];
+        });
     };
 
     return (

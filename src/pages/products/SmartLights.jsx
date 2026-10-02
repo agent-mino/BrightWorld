@@ -11,13 +11,13 @@ function SmartLights() {
   return (
     <div className='hidden'>
       <section className=" product-header-container">
-        <h2>SmartLights</h2>
+        <h2>Smart Lights</h2>
           <p>Modern technology infused for smarter lighting solutions.</p> 
      </section>
       <div className="product-container container text-center">
         <div className="row">
-        {SmartLightsProducts.map((product, index) => (
-            <div key={index} className="product-div col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+        {SmartLightsProducts.map((product) => (
+            <div key={product.id} className="product-div col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
               <ProductCards
                 src={product.imageSrc}
                 name={product.name}

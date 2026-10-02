@@ -10,7 +10,7 @@ export const FeedbackProvider = ({ children }) => {
     const [feedback, setFeedback] = useState([]);
 
     const addFeedback = (newFeedback) => {
-        setFeedback([...feedback, newFeedback]);
+        setFeedback(prev => [...prev, newFeedback]);
     };
 
     return (

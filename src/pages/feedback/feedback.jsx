@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useFeedback } from "../../context/feedbackContext";
 import useSlideAnimation from '../../animation/useSlideAnimation';
 import '../../styles/feedback.css';
 
-
-export default function Feedback() {
-    //slide animation
+export default function FeedbackPage() {
     useSlideAnimation();
 
-    //feedback state
     const { addFeedback } = useFeedback();
     const [showAlert, setShowAlert] = useState(false);
+    const alertTimerRef = useRef(null);
 
-    // Function to handle form submission
+    useEffect(() => {
+        return () => {
+            if (alertTimerRef.current) clearTimeout(alertTimerRef.current);
+        };
+    }, []);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
-        const feedbackData = {
+        addFeedback({
             name: formData.get('name'),
             message: formData.get('message')
-        };
-        addFeedback(feedbackData);
-        e.target.reset(); // Reset the form fields after submission
-        setShowAlert(true); // Set showAlert to true to display the alert
-        // Hide the alert after 3 seconds
-        setTimeout(() => {
-            setShowAlert(false);
-        }, 3000);
+        });
+        e.target.reset();
+        if (alertTimerRef.current) clearTimeout(alertTimerRef.current);
+        setShowAlert(true);
+        alertTimerRef.current = setTimeout(() => setShowAlert(false), 3000);
     };
 
     return (

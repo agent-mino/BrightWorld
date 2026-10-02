@@ -4,7 +4,7 @@ import Home from "./pages/home/home";
 import Contacts from "./pages/contacts/contacts";
 import About from "./pages/about/about";
 import Navbar from "./components/navbar/navbar";
-import Error from "./pages/error/error";
+import NotFound from "./pages/error/error";
 import Carts from "./pages/carts/carts";
 import Gallery from "./pages/gallery/gallery";
 import Brands from "./pages/brands/brands";
@@ -49,7 +49,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/brands" element={<Brands />} />
         <Route path="/cart/checkout" element={<Checkout />} />
-        <Route path="*" element={<Error />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
     </CartProvider>
