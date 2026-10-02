@@ -29,7 +29,7 @@ function App() {
       <div className='header-navbar-wrapper' >
         {/* header section */}
         <header >
-          <span> LIMITED | SAVE 40% ON DELIVERY ON ALL PROUCTS | 30/05/24 | </span>
+          <span> LIMITED | SAVE 40% ON DELIVERY ON ALL PRODUCTS | </span>
         </header>
         {/* navbar section */}
         <Navbar />
